@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<!-- Declara el tipo de documento como HTML5 y establece el idioma a inglés. -->
+<html lang="es">       
+
+<head>
+
+  <!-- Define el conjunto de caracteres como UTF-8 para soportar la mayoría de los caracteres y símbolos. -->
+  <meta charset="UTF-8">
+
+  <!-- Configura el ancho del viewport para que coincida con el ancho del dispositivo, esencial para diseño responsivo. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Especifica el título de la página, que aparece en la pestaña del navegador. -->
+  <title>Mi Proyecto Web</title>
+  
+  <!-- Vincula un archivo CSS externo llamado "styles.css" para los estilos de esta página. -->
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+
+<!-- El cuerpo del documento, donde se define el contenido visible de la página. -->
+<body>
+  
+  <!-- Encabezado -->
+  <header>
+
+    <!-- Representa la parte superior de la página, generalmente usada para títulos o navegación. -->
+    <h1>Mi Proyecto Web</h1>
+
+    <!-- Título principal del sitio. -->
+    <!-- Contenedor para información del usuario, oculto inicialmente debido a la clase "hidden". -->
+    <div id="user-info" class="hidden">
+      <p id="user-details"></p>
+      <!-- Párrafo donde se mostrarán detalles del usuario, vacío por defecto. -->
+    </div>
+  </header>
+
+  <!-- Contenedor principal que agrupa las secciones de la página. -->
+  <div class="container">
+    
+    <!-- Sección del formulario -->
+    <!-- Define una sección para el formulario, identificada por el ID "form-section". -->
+    <section id="form-section">
+     
+      <!-- Encabezado para describir la sección. -->
+      <h2>Formulario de Inscripción</h2>
+      
+      <!-- Formulario con un ID único "registration-form". -->
+      <form id="registration-form">
+        
+        <!-- Etiqueta asociada al campo de entrada con ID "name". -->
+        <label for="name">Nombre:</label>
+        
+        <!-- Campo de texto para ingresar el nombre. Es requerido. -->
+        <input type="text" id="name" name="name" required>
+        
+        <!-- Etiqueta asociada al campo de entrada con ID "email". -->
+        <label for="email">Correo Electrónico:</label>
+
+        <!-- Campo de entrada para correos electrónicos. Es requerido. -->
+        <input type="email" id="email" name="email" required>
+        
+        <!-- Etiqueta asociada al campo de entrada con ID "age". -->
+        <label for="age">Edad:</label>
+        
+        <!-- Campo de entrada para números (edad). Es requerido. -->
+        <input type="number" id="age" name="age" required>
+        
+        <!-- Botón para enviar el formulario. -->
+        <button type="submit">Enviar</button>
+        
+      </form>
+    </section>
+
+    <!-- Sección de botones -->
+    <!-- Sección para botones dinámicos, inicialmente oculta por la clase "hidden". -->
+    <section id="buttons-section" class="hidden">
+      
+      <!-- Encabezado que indica las acciones disponibles. -->
+      <h2>Seleccione una acción:</h2>
+      
+      <!-- Contenedor de los botones con la clase "buttons". -->
+      <div class="buttons">
+        
+        <!-- Botón que llama a la función "executeFunction" con un archivo de script como argumento. -->
+        <button onclick="executeFunction('function1.js', '')">Botón 1</button>
+        
+        <!-- Otro botón con funcionalidad dinámica. -->
+        <button onclick="executeFunction('function2.js', '')">Botón 2</button>
+        
+        <!-- Otro botón con funcionalidad dinámica. -->
+        <button onclick="executeFunction('function3.js', '')">Botón 3</button>
+        
+        <!-- Otro botón con funcionalidad dinámica. -->
+        <button onclick="executeFunction('function4.js', '')">Botón 4</button>
+        
+        <!-- Otro botón con funcionalidad dinámica. -->
+        <button onclick="executeFunction('function5.js', '')">Botón 5</button>
+        
+        <!-- Otro botón con funcionalidad dinámica. -->
+        <button onclick="executeFunction('function6.js', '')">Botón 6</button>
+        
+        <!-- Cada botón ejecuta la misma función pero con diferentes scripts como argumentos. -->
+      
+      </div>
+    </section>
+
+    <!-- Sección de resultados -->
+    <!-- Contenedor para mostrar resultados, inicialmente oculto. -->
+    <section id="result-display" class="hidden">
+      
+      <!-- Encabezado para indicar que se mostrarán resultados. -->
+      <h2>Resultado:</h2>
+
+      <!-- Párrafo donde se actualizarán los resultados dinámicamente. -->
+      <p id="result-text">Haz clic en un botón para ver los resultados.</p>
+      
+    </section>
+  </div>
+
+  <!-- Pie de página -->
+  <!-- Define la parte inferior de la página, generalmente para información secundaria. -->
+  <footer>
+    
+    <!-- Muestra un mensaje de copyright con el año actual. -->
+    <p>© 2024 Mi Proyecto Web. Todos los derechos reservados.</p>
+    
+  </footer>
+
+  <!-- Vincula un archivo JavaScript externo llamado "script.js" para la funcionalidad dinámica. -->
+  <script src="script.js"></script>
+  
+</body>
+</html>
